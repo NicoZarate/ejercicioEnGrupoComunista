@@ -17,7 +17,7 @@ public class Vuelo {
 		return origen;
 	}
 
-	public void setOrigen(String origen) {
+	public void setOrigen(String origen) { 
 		this.origen = origen;
 	}
 
