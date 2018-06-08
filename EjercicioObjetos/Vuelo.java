@@ -1,6 +1,6 @@
-package ejercicio_2;
+package ejercicio2;
 
-public class Vuelo {
+public class Vuelo extends Producto{
 	private String aerolinea;
 	private String origen;
 	private String destino;
@@ -33,8 +33,8 @@ public class Vuelo {
 		this.setAerolinea(aerolinea);
 		this.setOrigen(origen);
 		this.setDestino(destino);
-		this.setMonto(monto);
-		this.setDescripcion(descripcion);
+		super.setMontoBase(monto);
+		super.setDescripcion(descripcion);
 	}
 	
 	public double coeficiente(String tipo) {
@@ -47,7 +47,7 @@ public class Vuelo {
 	}
 	
 	public int cantidad_viajeros() {
-		return this.viajeros.size();
+		return this.getViajeros().size();
 	}
 	
 	public double montoTotal() {

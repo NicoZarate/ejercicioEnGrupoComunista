@@ -1,18 +1,27 @@
-package EjercicioObjetos;
+package ejercicio2;
 
 import java.util.ArrayList;
 
-public class Producto {
+public class Producto extends Proveedor{
 
 
 
     private ArrayList<Viajero> viajeros;
-    private Preveedor proveedor;
+    private Proveedor proveedor;
     private Double porcentajeDeGanaciaDespegar;
     private Double retencionDelGobierno;
     private Double montoBase;
+    private String descripcion;
 
-    public ArrayList<Viajero> getViajeros() {
+    public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public ArrayList<Viajero> getViajeros() {
         return viajeros;
     }
 
@@ -45,11 +54,11 @@ public class Producto {
     }
 
 
-    public Preveedor getProveedor() {
+    public Proveedor getProveedor() {
         return proveedor;
     }
 
-    public void setProveedor(Preveedor proveedor) {
+    public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
     }
 

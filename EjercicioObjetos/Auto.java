@@ -1,4 +1,4 @@
-package tp1;
+package ejercicio2;
 
 import java.util.List;
 
