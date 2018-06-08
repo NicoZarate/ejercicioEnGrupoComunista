@@ -1,14 +1,24 @@
 package EjercicioObjetos;
 
+import java.util.ArrayList;
+
 public class Producto {
 
-    private Viajero viajero;
+
+
+    private ArrayList<Viajero> viajeros;
     private Preveedor proveedor;
     private Double porcentajeDeGanaciaDespegar;
     private Double retencionDelGobierno;
     private Double montoBase;
 
+    public ArrayList<Viajero> getViajeros() {
+        return viajeros;
+    }
 
+    public void setViajeros(ArrayList<Viajero> viajeros) {
+        this.viajeros = viajeros;
+    }
     public Double getMontoBase() {
         return montoBase;
     }
@@ -35,14 +45,6 @@ public class Producto {
     }
 
 
-    public Viajero getViajero() {
-        return viajero;
-    }
-
-    public void setViajero(Viajero viajero) {
-        this.viajero = viajero;
-    }
-
     public Preveedor getProveedor() {
         return proveedor;
     }
@@ -51,9 +53,16 @@ public class Producto {
         this.proveedor = proveedor;
     }
 
-    public double ganaciaDespegar(){}
+    public double gananciaDespegar(){
+         return ((this.getMontoBase() * this.getPorcentajeDeGanaciaDespegar())/100) * this.getViajeros().size();
+    }
 
-    public double montoTotal(){}
+    public double totalRetencionDelGobierno(){
+        return ((this.getMontoBase() * this.getRetencionDelGobierno())/100)  * this.getViajeros().size();
+    }
+    public double montoTotal(){
+
+    }
 
 
 }
